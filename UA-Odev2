@@ -1,0 +1,65 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+
+public class HelloWorld : MonoBehaviour
+{
+   
+    void BolenleriBul(int a, int b)
+
+         
+    {
+        int[] liste = { a, b };
+
+
+        string TumListe = " Tüm Liste";
+        string mod2 = " İkiye Bölünenler ";
+        string mod3 = " Üçe Bölünenler ";
+        string mod4 = "Dörde Bölünenler";
+        string mod5 = " Beşe Bölünenler";
+        for (int i = a; i<b+1; i++)
+        {
+            TumListe += " - " + i;
+            if (i % 2 == 0) 
+            {
+                mod2 += " - " + i;
+            }
+            if (i % 3 == 0)
+            {
+                mod3 += " - " + i;
+            }
+            if(i % 4 == 0)
+            {
+                mod4 += " - " + i;
+            }
+            if(i % 5 == 0)
+            {
+                mod5 += " - " + i;
+                }
+        }
+              
+            
+        print(TumListe);
+        print(mod2);
+        print(mod3);
+        print(mod4);
+        print(mod5);
+                
+
+    }
+         
+    void Start()
+    {
+        BolenleriBul(23, 67);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}
